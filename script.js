@@ -39,8 +39,8 @@ function appendPageLinks (list){
       ul.appendChild(li);
       li.setAttribute("tag", "a");
       li.setAttribute("href", "#");
-      li.textContent = i; 
-      let aTag = document.querySelectorAll('a');
+      li.textContent = `${i}`; 
+      let aTag = document.querySelectorAll('#a');
       aTag[0].className = "active"
       aTag[i].addEventListener('click', showPage(list, i));
       for (let i = 0; i < aTag.length; i +=1){
@@ -53,5 +53,3 @@ function appendPageLinks (list){
 
 showPage(listItems, 1);
 appendPageLinks(listItems);
-
-
