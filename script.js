@@ -16,8 +16,7 @@ function showPage(list, page) {
    let startIndex = (page*itemsPerPage) - itemsPerPage;
    let endIndex = (page*itemsPerPage);
    for (let i = 0; i < listItems.length; i +=1){
-      //appending items to show to the DOM by using an if statement
-      //to select items based on their index value
+      //appending items to show to the DOM by using an if statement to select items based on their index value
       if (listItems[i] >= startIndex && listItems[i] <= endIndex){
          let ul = document.querySelector(".student-list");
          ul.appendChild(listItems[i]);
@@ -40,13 +39,12 @@ function appendPageLinks (list){
       li.setAttribute("tag", "a");
       li.setAttribute("href", "#");
       li.textContent = `${i}`; 
-      let aTag = document.querySelectorAll('#a');
-      aTag[0].className = "active"
-      aTag[i].addEventListener('click', showPage(list, i));
-      for (let i = 0; i < aTag.length; i +=1){
-        aTag[i].classList.remove('active');
+      li.className = "active"
+      li.addEventListener('click', showPage(list, i));
+      for (let i = 0; i < li.length; i +=1){
+        li[i].classList.remove('active');
       }
-      aTag.event.target = aTag.classList.add('active');
+      li.event.target = li.classList.add('active');
 
    }
 }
