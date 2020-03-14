@@ -44,7 +44,7 @@ function appendPageLinks (list){
       for (let i = 0; i < li.length; i +=1){
         li[i].classList.remove('active');
       }
-      li.event.target = li.classList.add('active');
+      li.e.target = li.classList.add('active');
 
    }
 }
